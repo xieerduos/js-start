@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if练习</title>
+</head>
+
+<body>
+    <script>
+        // 第一、声明两个变量a，b,随机赋值 0-10之间的数，然后如果a > b  那么输出 a，如果a = b 输出=号，如果 a< b 输出  老马
+        var a, b;
+        a = Math.random() * 10;
+        b = Math.random() * 10;
+
+        if (a > b) {
+            console.log('a > b', a, b);
+        } else if (a == b) {
+            console.log(" = ");
+        } else {
+            console.log('a<b', a, b);
+        }
+        
+
+        // 2、给定一个数值变量（1-7之间）如果是6、7则输出周末，否则输出工作日
+        // var a = 7;
+        // if(a == 6 ) {
+        //     console.log('周末');
+
+        // } else if( a == 7 ) {
+        //      console.log('周末');
+        // } else {
+        //     console.log('工作日');
+        // }
+
+        // 判断合并
+
+        if(a == 6 || a == 7 ){
+            console.log('周末');
+        } else {
+            console.log("工作日");
+        }
+        
+
+        // 3、判断用户名是否为空
+        // var userName = undefined;
+        // var userName = ""; // undefined ''  null
+
+        var userName = "sss";
+        
+        // null == undefined  => true
+
+        if( userName == null || userName.length == 0 ) {
+            console.log("空！");
+        }
+    
+        // 4、判断一个变量是不是字符串，如果是字符将字符串转为数值类型并返回结果。否则，直接把变量转成boolean类型输出。
+
+        var t = '234';
+
+        if( typeof(t) === "string" ){
+            console.log(Number(t));
+        } else {
+            // console.log(Boolean(t));
+            console.log(!!t);
+
+        }
+
+    </script>
+</body>
+
+</html>
